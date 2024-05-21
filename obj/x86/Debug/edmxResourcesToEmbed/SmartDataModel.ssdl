@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SMARTPayModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TradeName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="AddressLine1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AddressLine2" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NISNo" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="TaxRef" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="TRN" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="FrequencyId" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="NoOfPeriodsInYear" Type="smallint" Nullable="false" />
+    <Property Name="CurrentPeriod" Type="smallint" Nullable="false" />
+    <Property Name="CurrentYear" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="CurrentPeriodEndingDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="CurrentNisEndingDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="TypeOfTaxCredit" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="AnnualTaxCredit" Type="money" Nullable="false" />
+    <Property Name="GLFormat" Type="char" MaxLength="25" Nullable="false" />
+    <Property Name="PayrollType" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="TaxablePortionOfPay" Type="real" Nullable="false" />
+    <Property Name="PayAdviceFormat" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="ChequeFormat" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="TaxSchemeId" Type="int" Nullable="false" />
+    <Property Name="DefaultRentalCode" Type="int" Nullable="false" />
+    <Property Name="Addon" Type="real" Nullable="false" />
+    <Property Name="CurrencyId" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="NisCeiling" Type="money" Nullable="false" />
+    <Property Name="WageType" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="RegularHours" Type="real" Nullable="false" />
+    <Property Name="PaymentType" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="DeductionExcessOption" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="SupressDisplayOfRental" Type="bit" Nullable="false" />
+    <Property Name="PayrollClearingAccount" Type="char" MaxLength="100" Nullable="false" />
+    <Property Name="UseFormattingConvention" Type="bit" Nullable="false" />
+    <Property Name="PayrollSuspenseAccount" Type="char" MaxLength="100" Nullable="false" />
+    <Property Name="ProcessingStatus" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="DefaultBackupPath" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="PayrollAc" Type="char" MaxLength="13" Nullable="false" />
+    <Property Name="BankId" Type="smallint" Nullable="false" />
+    <Property Name="BankBranchId" Type="smallint" Nullable="false" />
+    <Property Name="IndentificationNo" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="ETransExportPath" Type="char" MaxLength="254" Nullable="false" />
+    <Property Name="GLExportType" Type="char" MaxLength="25" Nullable="false" />
+    <Property Name="GLExportPath" Type="char" MaxLength="254" Nullable="false" />
+    <Property Name="Consolidate" Type="bit" Nullable="false" />
+    <Property Name="Logo" Type="image" />
+    <Property Name="ProbationaryPeriod" Type="char" MaxLength="12" Nullable="false" />
+    <Property Name="AutoUpdateEmpType" Type="bit" Nullable="false" />
+    <Property Name="FrequencyDescription" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="DualTaxfree" Type="bit" Nullable="false" />
+    <Property Name="StartPeriod" Type="tinyint" Nullable="false" />
+    <Property Name="PrimaryTaxfree" Type="money" Nullable="false" />
+    <Property Name="SecondaryTaxfree" Type="money" Nullable="false" />
+    <Property Name="AutoCalculate" Type="bit" Nullable="false" />
+    <Property Name="CountryId" Type="smallint" Nullable="false" />
+    <Property Name="GraduatedIncomeTax" Type="bit" Nullable="false" />
+    <Property Name="PrintCompanyNameOnPayAdvice" Type="bit" Nullable="false" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhoneNo" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="MailingAddressLine1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MailingAddressLine2" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OverTimeDays" Type="bit" Nullable="false" />
+    <Property Name="OverTimePeriod" Type="bit" Nullable="false" />
+    <Property Name="OverTimeAmount" Type="float" Nullable="false" />
+    <Property Name="ClockIncluded" Type="bit" Nullable="false" />
+    <Property Name="ClockVersion" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="AutoApproval" Type="bit" Nullable="false" />
+    <Property Name="OverTimeReasonId" Type="smallint" Nullable="false" />
+    <Property Name="OverTimeReason" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastModified" Type="smalldatetime" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="char" MaxLength="25" Nullable="false" />
+    <Property Name="MaxPensionPercentage" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SysUser">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="UserName" Type="char" MaxLength="25" Nullable="false" />
+    <Property Name="UserPassword" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="SysAdmin" Type="bit" Nullable="false" />
+    <Property Name="PrivateToCompany" Type="bit" Nullable="false" />
+    <Property Name="SysSecurityRoleId" Type="smallint" Nullable="false" />
+    <Property Name="UserLevel" Type="smallint" Nullable="false" />
+    <Property Name="SysUserGroupId" Type="smallint" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="EmployeeId" Type="int" Nullable="false" />
+    <Property Name="LastModified" Type="smalldatetime" Nullable="false" />
+    <Property Name="LastModifiedBy" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="LastLoginTime" Type="datetime" />
+    <Property Name="LastPasswordChange" Type="datetime" />
+    <Property Name="Locked" Type="bit" Nullable="false" />
+    <Property Name="LoggedIn" Type="bit" Nullable="false" />
+    <Property Name="LoginAttempts" Type="tinyint" Nullable="false" />
+    <Property Name="LastReactivated" Type="smalldatetime" />
+    <Property Name="RestrictOrganizationalAccess" Type="bit" Nullable="false" />
+    <Property Name="RestrictBranchAccess" Type="bit" Nullable="false" />
+    <Property Name="RestrictDeptAccess" Type="bit" Nullable="false" />
+    <Property Name="RestrictLocationAccess" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="XRM1ActivePayrollDays">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="smallint" Nullable="false" />
+    <Property Name="ActiveDaysInPeriod" Type="int" Nullable="false" />
+    <Property Name="DateCreated" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SMARTPay.dbo.XRM1CurrentTransactions' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="XRM1CurrentTransactions">
+    <Key>
+      <PropertyRef Name="PayrollNo" />
+      <PropertyRef Name="EmployeeRef" />
+      <PropertyRef Name="PayrollCode" />
+      <PropertyRef Name="TransactionDate" />
+    </Key>
+    <Property Name="PayrollNo" Type="smallint" Nullable="false" />
+    <Property Name="EmployeeRef" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="PayrollCode" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="TransactionDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="TransactionQty" Type="float" />
+    <Property Name="TransactionAmount" Type="money" />
+    <Property Name="EnteredBy" Type="varchar" MaxLength="30" />
+    <Property Name="DateEntered" Type="smalldatetime" />
+  </EntityType>
+  <EntityContainer Name="SMARTPayModelStoreContainer">
+    <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysUser" EntityType="Self.SysUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="XRM1ActivePayrollDays" EntityType="Self.XRM1ActivePayrollDays" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="XRM1CurrentTransactions" EntityType="Self.XRM1CurrentTransactions" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [XRM1CurrentTransactions].[PayrollNo] AS [PayrollNo], 
+    [XRM1CurrentTransactions].[EmployeeRef] AS [EmployeeRef], 
+    [XRM1CurrentTransactions].[PayrollCode] AS [PayrollCode], 
+    [XRM1CurrentTransactions].[TransactionDate] AS [TransactionDate], 
+    [XRM1CurrentTransactions].[TransactionQty] AS [TransactionQty], 
+    [XRM1CurrentTransactions].[TransactionAmount] AS [TransactionAmount], 
+    [XRM1CurrentTransactions].[EnteredBy] AS [EnteredBy], 
+    [XRM1CurrentTransactions].[DateEntered] AS [DateEntered]
+    FROM [dbo].[XRM1CurrentTransactions] AS [XRM1CurrentTransactions]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

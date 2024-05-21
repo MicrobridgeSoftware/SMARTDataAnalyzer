@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SMARTPayModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TradeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AddressLine1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AddressLine2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NISNo" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TaxRef" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TRN" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="FrequencyId" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NoOfPeriodsInYear" Type="Int16" Nullable="false" />
+    <Property Name="CurrentPeriod" Type="Int16" Nullable="false" />
+    <Property Name="CurrentYear" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CurrentPeriodEndingDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="CurrentNisEndingDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TypeOfTaxCredit" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="AnnualTaxCredit" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="GLFormat" Type="String" MaxLength="25" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PayrollType" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TaxablePortionOfPay" Type="Single" Nullable="false" />
+    <Property Name="PayAdviceFormat" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ChequeFormat" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="TaxSchemeId" Type="Int32" Nullable="false" />
+    <Property Name="DefaultRentalCode" Type="Int32" Nullable="false" />
+    <Property Name="Addon" Type="Single" Nullable="false" />
+    <Property Name="CurrencyId" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="NisCeiling" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="WageType" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="RegularHours" Type="Single" Nullable="false" />
+    <Property Name="PaymentType" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DeductionExcessOption" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="SupressDisplayOfRental" Type="Boolean" Nullable="false" />
+    <Property Name="PayrollClearingAccount" Type="String" MaxLength="100" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="UseFormattingConvention" Type="Boolean" Nullable="false" />
+    <Property Name="PayrollSuspenseAccount" Type="String" MaxLength="100" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ProcessingStatus" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DefaultBackupPath" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PayrollAc" Type="String" MaxLength="13" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="BankId" Type="Int16" Nullable="false" />
+    <Property Name="BankBranchId" Type="Int16" Nullable="false" />
+    <Property Name="IndentificationNo" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ETransExportPath" Type="String" MaxLength="254" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="GLExportType" Type="String" MaxLength="25" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="GLExportPath" Type="String" MaxLength="254" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Consolidate" Type="Boolean" Nullable="false" />
+    <Property Name="Logo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProbationaryPeriod" Type="String" MaxLength="12" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="AutoUpdateEmpType" Type="Boolean" Nullable="false" />
+    <Property Name="FrequencyDescription" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DualTaxfree" Type="Boolean" Nullable="false" />
+    <Property Name="StartPeriod" Type="Byte" Nullable="false" />
+    <Property Name="PrimaryTaxfree" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="SecondaryTaxfree" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="AutoCalculate" Type="Boolean" Nullable="false" />
+    <Property Name="CountryId" Type="Int16" Nullable="false" />
+    <Property Name="GraduatedIncomeTax" Type="Boolean" Nullable="false" />
+    <Property Name="PrintCompanyNameOnPayAdvice" Type="Boolean" Nullable="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MailingAddressLine1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MailingAddressLine2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OverTimeDays" Type="Boolean" Nullable="false" />
+    <Property Name="OverTimePeriod" Type="Boolean" Nullable="false" />
+    <Property Name="OverTimeAmount" Type="Double" Nullable="false" />
+    <Property Name="ClockIncluded" Type="Boolean" Nullable="false" />
+    <Property Name="ClockVersion" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AutoApproval" Type="Boolean" Nullable="false" />
+    <Property Name="OverTimeReasonId" Type="Int16" Nullable="false" />
+    <Property Name="OverTimeReason" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastModified" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="25" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="MaxPensionPercentage" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SMARTPayEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Companies" EntityType="Self.Company" />
+    <EntitySet Name="XRM1CurrentTransactions" EntityType="SMARTPayModel.XRM1CurrentTransactions" />
+    <EntitySet Name="SysUsers" EntityType="SMARTPayModel.SysUser" />
+    <EntitySet Name="XRM1ActivePayrollDays" EntityType="SMARTPayModel.XRM1ActivePayrollDays" />
+  </EntityContainer>
+  <EntityType Name="XRM1CurrentTransactions">
+    <Key>
+      <PropertyRef Name="PayrollNo" />
+      <PropertyRef Name="EmployeeRef" />
+      <PropertyRef Name="PayrollCode" />
+      <PropertyRef Name="TransactionDate" />
+    </Key>
+    <Property Name="PayrollNo" Type="Int16" Nullable="false" />
+    <Property Name="EmployeeRef" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PayrollCode" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="TransactionDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TransactionQty" Type="Double" />
+    <Property Name="TransactionAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="EnteredBy" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DateEntered" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="SysUser">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="UserPassword" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="SysAdmin" Type="Boolean" Nullable="false" />
+    <Property Name="PrivateToCompany" Type="Boolean" Nullable="false" />
+    <Property Name="SysSecurityRoleId" Type="Int16" Nullable="false" />
+    <Property Name="UserLevel" Type="Int16" Nullable="false" />
+    <Property Name="SysUserGroupId" Type="Int16" Nullable="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" />
+    <Property Name="LastModified" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LastModifiedBy" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="LastLoginTime" Type="DateTime" Precision="3" />
+    <Property Name="LastPasswordChange" Type="DateTime" Precision="3" />
+    <Property Name="Locked" Type="Boolean" Nullable="false" />
+    <Property Name="LoggedIn" Type="Boolean" Nullable="false" />
+    <Property Name="LoginAttempts" Type="Byte" Nullable="false" />
+    <Property Name="LastReactivated" Type="DateTime" Precision="0" />
+    <Property Name="RestrictOrganizationalAccess" Type="Boolean" Nullable="false" />
+    <Property Name="RestrictBranchAccess" Type="Boolean" Nullable="false" />
+    <Property Name="RestrictDeptAccess" Type="Boolean" Nullable="false" />
+    <Property Name="RestrictLocationAccess" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="XRM1ActivePayrollDays">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="Int16" Nullable="false" />
+    <Property Name="ActiveDaysInPeriod" Type="Int32" Nullable="false" />
+    <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
